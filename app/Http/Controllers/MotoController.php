@@ -52,7 +52,7 @@ class MotoController extends Controller
         }
 
         $moto = Moto::create($dados);
-        //INSERT INTO motos (marca, modelo) VALUES ('$dados->marca', '$dados->modelo')
+        //INSERT INTO motos (marca, modelo) VALUES ('$dados->marca', '$dados->modelo');
         return response()->json($moto, 201);
     }
 
@@ -66,14 +66,14 @@ class MotoController extends Controller
         }
 
         Moto::findOrFail($id)->update($dados);
-        //UPDATE motos SET marca = '$request->marca', modelo = '$request->modelo' WHERE id = $id
+        //UPDATE motos SET marca = '$request->marca', modelo = '$request->modelo' WHERE id = $id;
         return $this->show($id);
     }
 
     public function destroy($id)
     {
         Moto::findOrFail($id)->delete();
-        //DELETE FROM motos WHERE id = $id
+        //DELETE FROM motos WHERE id = $id;
         return response()->json('', 204);
     }
 }
