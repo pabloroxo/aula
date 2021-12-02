@@ -38,7 +38,7 @@ class MotoController extends Controller
     public function show($id)
     {
         $moto = Moto::findOrFail($id);
-        //SELECT * FROM moto WHERE id = $id
+        //SELECT * FROM moto WHERE id = $id;
         return response()->json($moto);
     }
 
